@@ -37,12 +37,13 @@
                 animation-iteration-count: infinite;
                 margin: 0 auto 0 auto;
                 transform-origin: bottom;
+                bottom: 13px;
             }
             .stage {
-                margin-top: 17%;
                 display: flex;
-                height: 100px;
-                width: 100%;
+                width: 160px;
+                margin: 20% auto;
+                border-bottom: solid 2px white;
             }
             .bounce-1 {
                 animation-name: bounce-1;
@@ -67,10 +68,29 @@
             
              .hell-button {
                 height: 40px;
-                width: 30px;
+                width: 28px;
                 display: block;
                 background: black;
                 border: solid 1px white;
+                border-right: solid 4px white;
+                border-bottom: none;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                text-align: center;
+                margin-right: 30px;
+            }
+            .hell .hell-button {
+                border: solid 1px rgb(34, 250, 0);
+                border-right: solid 4px rgb(34, 250, 0);
+                border-bottom: none;
+                background: rgb(255, 127, 0);
+            }
+                .hell .stage {border-bottom: solid 2px rgb(34, 250, 0);}
+            .hell-button p {
+                font-size: 6px;
+                color: white;
+                margin-top: 16px;
+                letter-spacing: 1px;
             }
 
             .hell {
@@ -83,17 +103,22 @@
  , rgb(0 243 237) 68%, rgb(114 234 184) 100%);
  box-shadow: 0px 0px 5px 1px #a6ff00de;
             }
-            .hell .ghost .eye{    background: #008c40;}
+            .hell .ghost .eye{background: #008c40;}
         </style>
     </head>
     <body>
-        <!-- <div id="hell-js" class="hell-button"></div>-->
+
+    
+
         <div class="stage">
-            <div id="hell-js" class="ghost bounce-1">
+            <div class="ghost bounce-1">
                 <div class="eyes">
                     <div class="eye"></div>
                     <div class="eye"></div>
                 </div>
+            </div>
+            <div id="hell-js" class="hell-button">
+                <p>RIP</p>
             </div>
         </div>
         
