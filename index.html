@@ -4,6 +4,8 @@
         <title>The Best Is Yet To Come</title>
          <meta name="description" content="The Best is Yet To Come! YOLO!">
         <meta name="keywords" content="Ghost, Death, RIP">
+        <meta name="Author" content="Akron Design And nd Development">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9VEQZS2J1"></script>
         <script>
@@ -15,8 +17,8 @@
         </script>
         
         <style>
-            html{background: #000000;}
-            body{display: block}
+           
+           body{display: block;margin: 0px; padding: 0px;background: #000000;}
             .ghost {
                 width: 30px;
                 height: 40px;
@@ -62,17 +64,49 @@
                 float:left
             }
             .eye + .eye {float: right;}
+            
+             .hell-button {
+                height: 40px;
+                width: 30px;
+                display: block;
+                background: black;
+                border: solid 1px white;
+            }
+
+            .hell {
+                background: #d60088;
+            }
+
+            .hell .ghost{
+                background: linear-gradient( 
+152deg
+ , rgb(0 243 237) 68%, rgb(114 234 184) 100%);
+ box-shadow: 0px 0px 5px 1px #a6ff00de;
+            }
+            .hell .ghost .eyes{    background: #008c40;}
         </style>
     </head>
     <body>
+        <!-- <div id="hell-js" class="hell-button"></div>-->
         <div class="stage">
-                <div class="ghost bounce-1">
-<div class="eyes">
-    <div class="eye"></div>
-    <div class="eye"></div>
-</div>
+            <div id="hell-js" class="ghost bounce-1">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
                 </div>
+            </div>
         </div>
         
     </body>
+    <script>
+    $("#hell-js").click(function() {
+    if($("body").hasClass("hell")){
+    $("body").removeClass("hell");
+    }
+    else {
+    window.scrollTo(0, 0);
+    $("body").addClass("hell");
+    }
+    });
+</script>
 </html>
