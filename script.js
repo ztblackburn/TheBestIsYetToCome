@@ -21,6 +21,9 @@
             $("#ghost-two-js").addClass("move-ghost");
             $("#hell-js").addClass("move-ghost");
             $(".stage").fadeOut(6000);
+            $("a").finish().animate({
+                opacity: "1"
+            }, 7000);
         };
     });
 }());
