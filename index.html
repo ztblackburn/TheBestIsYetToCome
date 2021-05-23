@@ -15,9 +15,8 @@
 
           gtag('config', 'G-N9VEQZS2J1');
         </script>
-        
+       
         <style>
-           
            body{display: block;margin: 0px; padding: 0px;background: #000000;}
            .ghost.ghost-one {
                margin: 0 -19px 0 43px;
@@ -117,67 +116,8 @@
                 -moz-animation: fadeIn ease 3s;
                 -o-animation: fadeIn ease 3s;
                 -ms-animation: fadeIn ease 3s;}
-
-@keyframes fadeIn{
-  0% {
-    opacity:0;
-    transform: translateY(0);
-  }
-  50%  { transform: translateY(-10px); }
-  100% {
-    opacity:1;
-    transform: translateY(0); 
-  }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-    opacity:0;
-    transform: translateY(0);
-  }
-  50%  { transform: translateY(-10px); }
-  100% {
-    opacity:1;
-    transform: translateY(0); 
-  }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-    opacity:0;
-    transform: translateY(0);
-  }
-  50%  { transform: translateY(-10px); }
-  100% {
-    opacity:1;
-    transform: translateY(0); 
-  }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-    opacity:0;
-    transform: translateY(0);
-  }
-  50%  { transform: translateY(-10px); }
-  100% {
-    opacity:1;
-    transform: translateY(0); 
-  }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-    opacity:0;
-    transform: translateY(0);
-  }
-  50%  { transform: translateY(-10px); }
-  100% {
-    opacity:1;
-    transform: translateY(0); 
-  }
-}
         </style>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="stage">
@@ -198,32 +138,5 @@
             </div>
         </div>
     </body>
-    <script>
-    $("#hell-js").click(function() {
-        if($("body").hasClass("hell")){
-            $("body").removeClass("hell");
-        }
-        else {
-            window.scrollTo(0, 0);
-            $("body").addClass("hell");
-        }
-    });
-
-    $("#raise-js").click(function() {
-    if($("#ghost-two-js").hasClass("show")){
-            $("#ghost-two-js").removeClass("show");
-        }
-        else {
-            window.scrollTo(0, 0);
-            $("#ghost-two-js").addClass("show");
-        }
-    });
-
-    $("#ghost-two-js").click(function() {
-    if($("#ghost-two-js").hasClass("show")){
-            $("#ghost-two-js").addClass("move-ghost");
-        }
-       
-    });
-</script>
+    <script type="text/javascript" src="script.js" type=""></script>
 </html>
