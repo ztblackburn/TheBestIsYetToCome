@@ -1,10 +1,165 @@
 <html>
     <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>The Best Is Yet To Come</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Best Is Yet To Come</title>
+         <meta name="description" content="The Best is Yet To Come! YOLO!">
+        <meta name="keywords" content="Ghost, Death, RIP">
+        <meta name="Author" content="Akron Design And Development">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9VEQZS2J1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-N9VEQZS2J1');
+        </script>
+       
         <style>
-            html{background: black;}
+           body{display: block;margin: 0px; padding: 0px;background: #000000;}
+           .ghost.ghost-one {
+               margin: 0 -19px 0 43px;
+               }
+            .ghost {
+                width: 30px;
+                height: 40px;
+                display: block;
+                position: relative;
+                margin: auto;
+                background: rgb(255,255,255);
+                 background: linear-gradient( 152deg, rgb(211 253 219) 68%, rgb(144 193 177) 100%);
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                box-shadow: 0px 0px 5px 1px #e6e6e6;
+                align-self: flex-end;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                margin: 0px 12px 0px 34px;
+                transform-origin: bottom;
+                bottom: 13px;
+            }
+            .stage {
+                display: flex;
+                width: 200px;
+                margin: 30% auto;
+                border-bottom: solid 2px white;
+            }
+            .bounce-1 {
+                animation-name: bounce-1;
+                animation-timing-function: linear;
+            }
+            @keyframes bounce-1 {
+                0%   { transform: translateY(0); }
+                50%  { transform: translateY(-10px); }
+                100% { transform: translateY(0); }
+            }
+            .eyes{
+                margin: 13px auto 0;
+                width: 17px;
+            }
+            .eye {
+                height: 4px;
+                width: 4px;
+                background: black;
+                float:left
+            }
+            .eye + .eye {float: right;}
+            
+             .hell-button {
+                height: 40px;
+                width: 28px;
+                display: block;
+                background: black;
+                border: solid 1px white;
+                border-right: solid 4px white;
+                border-bottom: none;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                text-align: center;
+                margin-right: 30px;
+            }
+            .hell .hell-button {
+                border: solid 1px rgb(34, 250, 0);
+                border-right: solid 4px rgb(34, 250, 0);
+                border-bottom: none;
+                background: rgb(255, 127, 0);
+                
+                margin-right: 30px;
+            }
+            .hell .stage {border-bottom: solid 2px rgb(34, 250, 0);}
+            .hell-button p {
+                font-size: 6px;
+                color: white;
+                margin-top: 16px;
+                letter-spacing: 1px;
+            }
+
+            .hell {
+                background: #d60088;
+            }
+
+            .hell .ghost{
+                background: linear-gradient(52deg, rgb(0 243 237) 68%, rgb(114 234 184) 100%); box-shadow: 0px 0px 5px 1px #a6ff00de;
+            }
+            .hell .ghost .eye{background: #008c40;}
+            .ghost.ghost-two{
+                opacity:0;
+            }
+              /*.ghost.ghost-two {visibility: hidden;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                transform-origin: bottom;
+                animation-timing-function: linear;
+            }
+            .ghost.ghost-two.show{
+              visibility: visible;
+                animation: fadeIn ease 3s;
+                -webkit-animation: fadeIn ease 3s;
+                -moz-animation: fadeIn ease 3s;
+                -o-animation: fadeIn ease 3s;
+                -ms-animation: fadeIn ease 3s;
+            } */
+            
+            .move-ghost {
+                animation-duration: 8s !important;
+                animation-timing-function: ease !important;
+                animation-delay: 0s !important;
+                animation-iteration-count: 1 !important;
+                animation-direction: normal !important;
+                animation-fill-mode: forwards;
+                animation-play-state: running !important;
+                animation-name: move !important;
+            }
+
+            @keyframes move {
+                from {
+                left: 0%}
+                to {
+                left: 300%;}
+            }
+
         </style>
+        <link href="style.css" rel="stylesheet">
     </head>
-    <body></body>
+    <body>
+        <div class="stage">
+            <div id="hell-js" class="ghost ghost-one bounce-1">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+            </div>
+            <div id="ghost-two-js" class="ghost ghost-two bounce-1">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                </div>
+            <div class="hell-button" id="raise-js">
+                <p>RIP</p>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="script.js" type=""></script>
 </html>
