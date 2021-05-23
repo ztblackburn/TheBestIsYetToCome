@@ -19,6 +19,9 @@
         <style>
            
            body{display: block;margin: 0px; padding: 0px;background: #000000;}
+           .ghost.ghost-one {
+               margin: 0 -19px 0 43px;
+               }
             .ghost {
                 width: 30px;
                 height: 40px;
@@ -26,23 +29,21 @@
                 position: relative;
                 margin: auto;
                 background: rgb(255,255,255);
-                 background: linear-gradient( 
-152deg
- , rgb(211 253 219) 68%, rgb(144 193 177) 100%);
+                 background: linear-gradient( 152deg, rgb(211 253 219) 68%, rgb(144 193 177) 100%);
                 border-top-right-radius: 15px;
                 border-top-left-radius: 15px;
                 box-shadow: 0px 0px 5px 1px #e6e6e6;
                 align-self: flex-end;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
-                margin: 0 auto 0 auto;
+                margin: 0px 12px 0px 34px;
                 transform-origin: bottom;
                 bottom: 13px;
             }
             .stage {
                 display: flex;
-                width: 160px;
-                margin: 20% auto;
+                width: 200px;
+                margin: 30% auto;
                 border-bottom: solid 2px white;
             }
             .bounce-1 {
@@ -84,8 +85,10 @@
                 border-right: solid 4px rgb(34, 250, 0);
                 border-bottom: none;
                 background: rgb(255, 127, 0);
+                
+                margin-right: 30px;
             }
-                .hell .stage {border-bottom: solid 2px rgb(34, 250, 0);}
+            .hell .stage {border-bottom: solid 2px rgb(34, 250, 0);}
             .hell-button p {
                 font-size: 6px;
                 color: white;
@@ -98,40 +101,129 @@
             }
 
             .hell .ghost{
-                background: linear-gradient( 
-152deg
- , rgb(0 243 237) 68%, rgb(114 234 184) 100%);
- box-shadow: 0px 0px 5px 1px #a6ff00de;
+                background: linear-gradient(52deg, rgb(0 243 237) 68%, rgb(114 234 184) 100%); box-shadow: 0px 0px 5px 1px #a6ff00de;
             }
             .hell .ghost .eye{background: #008c40;}
+            .ghost.ghost-two {visibility: hidden;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                transform-origin: bottom;
+                animation-timing-function: linear;
+            }
+            .ghost.ghost-two.show{
+                visibility: visible;
+                animation: fadeIn ease 3s;
+                -webkit-animation: fadeIn ease 3s;
+                -moz-animation: fadeIn ease 3s;
+                -o-animation: fadeIn ease 3s;
+                -ms-animation: fadeIn ease 3s;}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+    transform: translateY(0);
+  }
+  50%  { transform: translateY(-10px); }
+  100% {
+    opacity:1;
+    transform: translateY(0); 
+  }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+    opacity:0;
+    transform: translateY(0);
+  }
+  50%  { transform: translateY(-10px); }
+  100% {
+    opacity:1;
+    transform: translateY(0); 
+  }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+    opacity:0;
+    transform: translateY(0);
+  }
+  50%  { transform: translateY(-10px); }
+  100% {
+    opacity:1;
+    transform: translateY(0); 
+  }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+    opacity:0;
+    transform: translateY(0);
+  }
+  50%  { transform: translateY(-10px); }
+  100% {
+    opacity:1;
+    transform: translateY(0); 
+  }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+    opacity:0;
+    transform: translateY(0);
+  }
+  50%  { transform: translateY(-10px); }
+  100% {
+    opacity:1;
+    transform: translateY(0); 
+  }
+}
         </style>
     </head>
     <body>
-
-    
-
         <div class="stage">
-            <div class="ghost bounce-1">
+            <div id="hell-js" class="ghost ghost-one bounce-1">
                 <div class="eyes">
                     <div class="eye"></div>
                     <div class="eye"></div>
                 </div>
             </div>
-            <div id="hell-js" class="hell-button">
+            <div id="ghost-two-js" class="ghost ghost-two">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                </div>
+            <div class="hell-button" id="raise-js">
                 <p>RIP</p>
             </div>
         </div>
-        
     </body>
     <script>
     $("#hell-js").click(function() {
-    if($("body").hasClass("hell")){
-    $("body").removeClass("hell");
-    }
-    else {
-    window.scrollTo(0, 0);
-    $("body").addClass("hell");
-    }
+        if($("body").hasClass("hell")){
+            $("body").removeClass("hell");
+        }
+        else {
+            window.scrollTo(0, 0);
+            $("body").addClass("hell");
+        }
+    });
+
+    $("#raise-js").click(function() {
+    if($("#ghost-two-js").hasClass("show")){
+            $("#ghost-two-js").removeClass("show");
+        }
+        else {
+            window.scrollTo(0, 0);
+            $("#ghost-two-js").addClass("show");
+        }
+    });
+
+    $("#ghost-two-js").click(function() {
+    if($("#ghost-two-js").hasClass("show")){
+            $("#ghost-two-js").addClass("move-ghost");
+        }
+       
     });
 </script>
 </html>
